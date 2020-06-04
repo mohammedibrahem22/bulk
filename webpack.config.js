@@ -11,7 +11,7 @@ const del = require("del");
 // theme name
 const themeName = "metronic";
 // global variables
-const rootPath = path.resolve(__dirname, "index.html");
+const rootPath = path.resolve(__dirname);
 const distPath = rootPath + "/src/assets";
 
 const entries = {
