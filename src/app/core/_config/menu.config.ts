@@ -16,39 +16,39 @@ export class MenuConfig {
 					submenu: [
 						{
 							title: 'Create Corporate Account',
-							page: '/user-management/users'
+							page: '/bass/user-management/create-corporate-acceount'
 						},
 						{
 							title: 'Create Fixed Corporate Account',
-							page: '/user-management/roles'
+							// page: '/user-management/roles'
 						},
 						{
 							title: 'Create Customized Corporate Account',
-							page: '/user-management/roles'
+							// page: '/user-management/roles'
 						},
 						{
 							title: 'Create Flat Account',
-							page: '/user-management/roles'
+							// page: '/user-management/roles'
 						},
 						{
 							title: 'Create ADSL Account',
-							page: '/user-management/roles'
+							// page: '/user-management/roles'
 						},
 						{
 							title: 'Create MNP Account',
-							page: '/user-management/roles'
+							// page: '/user-management/roles'
 						},
 						{
 							title: 'Create New Corporate Account (Promotion)',
-							page: '/user-management/roles'
+							// page: '/user-management/roles'
 						},
 						{
 							title: 'Create New Lego Corporate Account',
-							page: '/user-management/roles'
+							// page: '/user-management/roles'
 						},
 						{
 							title: 'Create New Flat Account',
-							page: '/user-management/roles'
+							// page: '/user-management/roles'
 						}
 					]
 				},

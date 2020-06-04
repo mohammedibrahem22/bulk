@@ -70,7 +70,7 @@ const routes: Routes = [
 				component: RolesListComponent
 			},
 			{
-				path: 'users',
+				path: 'create-corporate-acceount',
 				component: UsersListComponent
 			},
 			{

@@ -129,8 +129,8 @@ export class LoginComponent implements OnInit, OnDestroy {
 	 */
 	submit() {
 		if(this.userName == 'admin' && this.password== 'admin'){
+			this.router.navigateByUrl("/bass");
 			console.log("login", this.userName, this.password)
-			this.router.navigateByUrl("/");
 		  }
 		// const controls = this.loginForm.controls;
 		// /** check form */
