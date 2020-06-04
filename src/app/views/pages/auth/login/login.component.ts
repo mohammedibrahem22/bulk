@@ -24,6 +24,7 @@ const DEMO_PARAMS = {
 @Component({
 	selector: 'kt-login',
 	templateUrl: './login.component.html',
+	styleUrls: ['./login.component.scss'],
 	encapsulation: ViewEncapsulation.None
 })
 export class LoginComponent implements OnInit, OnDestroy {
@@ -36,6 +37,9 @@ export class LoginComponent implements OnInit, OnDestroy {
 	private unsubscribe: Subject<any>;
 
 	private returnUrl: any;
+	// loginForm: FormGroup;
+  userName: string;
+  password: string;
 
 	// Read more: => https://brianflove.com/2016/12/11/anguar-2-unsubscribe-observables/
 
@@ -72,7 +76,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 	 * On init
 	 */
 	ngOnInit(): void {
-		this.initLoginForm();
+		// this.initLoginForm();
 
 		// redirect back to the returnUrl before login
 		this.route.queryParams.subscribe(params => {
@@ -94,69 +98,73 @@ export class LoginComponent implements OnInit, OnDestroy {
 	 * Form initalization
 	 * Default params, validators
 	 */
-	initLoginForm() {
-		// demo message to show
-		if (!this.authNoticeService.onNoticeChanged$.getValue()) {
-			const initialNotice = `Use account
-			<strong>${DEMO_PARAMS.EMAIL}</strong> and password
-			<strong>${DEMO_PARAMS.PASSWORD}</strong> to continue.`;
-			this.authNoticeService.setNotice(initialNotice, 'info');
-		}
+	// initLoginForm() {
+	// 	// demo message to show
+	// 	if (!this.authNoticeService.onNoticeChanged$.getValue()) {
+	// 		const initialNotice = `Use account
+	// 		<strong>${DEMO_PARAMS.EMAIL}</strong> and password
+	// 		<strong>${DEMO_PARAMS.PASSWORD}</strong> to continue.`;
+	// 		this.authNoticeService.setNotice(initialNotice, 'info');
+	// 	}
 
-		this.loginForm = this.fb.group({
-			email: [DEMO_PARAMS.EMAIL, Validators.compose([
-				Validators.required,
-				Validators.email,
-				Validators.minLength(3),
-				Validators.maxLength(320) // https://stackoverflow.com/questions/386294/what-is-the-maximum-length-of-a-valid-email-address
-			])
-			],
-			password: [DEMO_PARAMS.PASSWORD, Validators.compose([
-				Validators.required,
-				Validators.minLength(3),
-				Validators.maxLength(100)
-			])
-			]
-		});
-	}
+	// 	this.loginForm = this.fb.group({
+	// 		email: [DEMO_PARAMS.EMAIL, Validators.compose([
+	// 			Validators.required,
+	// 			Validators.email,
+	// 			Validators.minLength(3),
+	// 			Validators.maxLength(320) // https://stackoverflow.com/questions/386294/what-is-the-maximum-length-of-a-valid-email-address
+	// 		])
+	// 		],
+	// 		password: [DEMO_PARAMS.PASSWORD, Validators.compose([
+	// 			Validators.required,
+	// 			Validators.minLength(3),
+	// 			Validators.maxLength(100)
+	// 		])
+	// 		]
+	// 	});
+	// }
 
 	/**
 	 * Form Submit
 	 */
 	submit() {
-		const controls = this.loginForm.controls;
-		/** check form */
-		if (this.loginForm.invalid) {
-			Object.keys(controls).forEach(controlName =>
-				controls[controlName].markAsTouched()
-			);
-			return;
-		}
+		if(this.userName == 'admin' && this.password== 'admin'){
+			console.log("login", this.userName, this.password)
+			this.router.navigateByUrl("/");
+		  }
+		// const controls = this.loginForm.controls;
+		// /** check form */
+		// if (this.loginForm.invalid) {
+		// 	Object.keys(controls).forEach(controlName =>
+		// 		controls[controlName].markAsTouched()
+		// 	);
+		// 	return;
+		// }
 
-		this.loading = true;
+		// this.loading = true;
 
-		const authData = {
-			email: controls.email.value,
-			password: controls.password.value
-		};
-		this.auth
-			.login(authData.email, authData.password)
-			.pipe(
-				tap(user => {
-					if (user) {
-						this.store.dispatch(new Login({authToken: user.accessToken}));
-						this.router.navigateByUrl(this.returnUrl); // Main page
-					} else {
-						this.authNoticeService.setNotice(this.translate.instant('AUTH.VALIDATION.INVALID_LOGIN'), 'danger');
-					}
-				}),
-				takeUntil(this.unsubscribe),
-				finalize(() => {
-					this.loading = false;
-					this.cdr.markForCheck();
-				})
-			)
-			.subscribe();
+		// const authData = {
+		// 	email: controls.email.value,
+		// 	password: controls.password.value
+		// };
+		// this.auth
+		// 	.login(authData.email, authData.password)
+		// 	.pipe(
+		// 		tap(user => {
+		// 			if (user) {
+		// 				this.store.dispatch(new Login({authToken: user.accessToken}));
+		// 				this.router.navigateByUrl(this.returnUrl); // Main page
+		// 			} else {
+		// 				this.authNoticeService.setNotice(this.translate.instant('AUTH.VALIDATION.INVALID_LOGIN'), 'danger');
+		// 			}
+		// 		}),
+		// 		takeUntil(this.unsubscribe),
+		// 		finalize(() => {
+		// 			this.loading = false;
+		// 			this.cdr.markForCheck();
+		// 		})
+		// 	)
+		// 	.subscribe();
 	}
 
 	/**
