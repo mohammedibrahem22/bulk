@@ -8,9 +8,9 @@ import {ErrorPageComponent} from './views/theme/content/error-page/error-page.co
 import {AuthGuard} from './core/auth';
 
 const routes: Routes = [
-	{path: 'auth', loadChildren: () => import('app/views/pages/auth/auth.module').then(m => m.AuthModule)},
+	{path: '', loadChildren: () => import('app/views/pages/auth/auth.module').then(m => m.AuthModule)},
 
-	{ path: '', component: BaseComponent, 
+	{ path: 'welcome', component: BaseComponent, 
 		children: [
 			{
 				path: 'dashboard',
