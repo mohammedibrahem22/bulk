@@ -1,0 +1,30 @@
+.form-group {
+    margin-bottom: 3px;
+    // margin-top: 0px;
+  }
+
+  fieldset{
+    border: 2px solid rgb(145, 141, 141);
+    color: black;
+  }
+
+  legend{
+    background-color: rgb(149, 226, 62);
+    color: white;
+  }
+  .btn {
+    font-size: 80%;
+    border: 2px solid rgb(145, 141, 141);
+    letter-spacing: .1rem;
+    font-weight: bold;
+    transition: all 0.2s;
+    width: 100px;
+    height: 30px;
+    background-color:rgb(230, 223, 223);
+    // position: fixed;
+    padding: 0;
+  }
+
+  // form input{
+  //   padding-left: 10px;
+  // }

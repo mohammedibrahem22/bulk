@@ -1,0 +1,620 @@
+<form name="form" (ngSubmit)="f1.form.valid && saveEntity()" #f1="ngForm" class="kt-form kt-form--group-seperator-dashed">
+    <fieldset>
+        <legend>Defualt contact information:</legend>
+    <div class="row">
+        <div class="col">
+            <div class="row form-group">
+                <div class="col-4" style="text-align: right;padding: 0px;">
+                    <label>Company Name:</label>
+                </div>
+                <div class="col">
+                    <input type="text">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="row form-group">
+                <div class="col-4" style="text-align: right; padding: 0px;">
+                    <label>Customer Group:</label>
+                </div>
+                <div class="col">
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="row">
+        <div class="col">
+            <div class="row form-group">
+                <div class="col-4" style="text-align: right; padding: 0px;">
+                    <label>First Name :  </label>
+                </div>
+                <div class="col">
+
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="row form-group">
+                <div class="col-4" style="text-align: right; padding: 0px;">
+                    <label>Birth Date :  </label>
+                </div>
+                <div class="col">
+                    <input type="text">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="row">
+        <div class="col">
+            <div class="row form-group">
+                <div class="col-4" style="text-align: right; padding: 0px;">
+                    <label>Last Name :  </label>
+                </div>
+                <div class="col">
+                    <input type="text">
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div class="col">
+            <div class="row form-group">
+                <div class="col-4" style="text-align: right; padding: 0px;">
+                    <label>Area :  </label>
+                </div>
+                <div class="col">
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    <!--  -->
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>House Number :  </label>
+                    </div>
+                    <div class="col">
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Contract Responsible :  </label>
+                    </div>
+                    <div class="col">
+                        <input type="text">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Street :  </label>
+                    </div>
+                    <div class="col">
+                        <input type="text" style="width: 600px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            
+        </div>
+
+    </div>
+    <!--  -->
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>City :  </label>
+                    </div>
+                    <div class="col">
+                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" style="width: 150px;">
+                            <option [ngValue]="null">--Select--</option>
+                            <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
+                            <!-- {{securityQuestion.question | translate}}</option> -->
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Bill Cycle :  </label>
+                    </div>
+                    <div class="col">
+                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" style="width: 150px;">
+                            <option [ngValue]="null">--Select--</option>
+                            <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
+                            <!-- {{securityQuestion.question | translate}}</option> -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Country :  </label>
+                    </div>
+                    <div class="col">
+                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" style="width: 150px;">
+                            <option [ngValue]="null">--Select--</option>
+                            <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
+                            <!-- {{securityQuestion.question | translate}}</option> -->
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Credit Limit :  </label>
+                    </div>
+                    <div class="col">
+                        <input type="text">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Contact Phone Number :  </label>
+                    </div>
+                    <div class="col">
+                        <input type="text">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Payment Responsible :  </label>
+                    </div>
+                    <div class="col">
+                        <input type="text">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Search Code :  </label>
+                    </div>
+                    <div class="col">
+                        <input type="text">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Payment Method :  </label>
+                    </div>
+                    <div class="col">
+                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" style="width: 150px;">
+                            <option [ngValue]="null">--Cash--</option>
+                            <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
+                            <!-- {{securityQuestion.question | translate}}</option> -->
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Trade :  </label>
+                    </div>
+                    <div class="col">
+                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" style="width: 150px;">
+                            <option [ngValue]="null">--Trade--</option>
+                            <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
+                            <!-- {{securityQuestion.question | translate}}</option> -->
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Driving License :  </label>
+                    </div>
+                    <div class="col">
+                        <input type="text">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Job Description :  </label>
+                    </div>
+                    <div class="col">
+                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" style="width: 150px;">
+                            <option [ngValue]="null">--Select--</option>
+                            <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
+                            <!-- {{securityQuestion.question | translate}}</option> -->
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Rate Plan:  </label>
+                    </div>
+                    <div class="col">
+                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" style="width: 150px;">
+                            <option [ngValue]="null">--Select--</option>
+                            <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
+                            <!-- {{securityQuestion.question | translate}}</option> -->
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Customer Rateplan:  </label>
+                    </div>
+                    <div class="col">
+                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" style="width: 150px;">
+                            <option [ngValue]="null">--Select--</option>
+                            <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
+                            <!-- {{securityQuestion.question | translate}}</option> -->
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="col">
+            
+        </div>
+    </div>
+    <!--  -->
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Nationality :  </label>
+                    </div>
+                    <div class="col">
+                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" style="width: 150px;">
+                            <option [ngValue]="null">Egypt</option>
+                            <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
+                            <!-- {{securityQuestion.question | translate}}</option> -->
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Handset:  </label>
+                    </div>
+                    <div class="col">
+                        <input type="text">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Id Document:  </label>
+                    </div>
+                    <div class="col">
+                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" style="width: 150px;">
+                            <option [ngValue]="null">--Select--</option>
+                            <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
+                            <!-- {{securityQuestion.question | translate}}</option> -->
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Old Operator:  </label>
+                    </div>
+                    <div class="col">
+                        <input type="text">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Id Document Number:  </label>
+                    </div>
+                    <div class="col">
+                        <input type="text">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Preferred Channel:  </label>
+                    </div>
+                    <div class="col">
+                        <input type="text">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--  --><div class="row">
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Sales Channel:  </label>
+                    </div>
+                    <div class="col">
+                        <input type="text" >
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Sales Force Id:  </label>
+                    </div>
+                    <div class="col">
+                        <input type="text">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Language:  </label>
+                    </div>
+                    <div class="col">
+                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" style="width: 150px;">
+                            <option [ngValue]="null">Arabic</option>
+                            <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
+                            <!-- {{securityQuestion.question | translate}}</option> -->
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="col">
+            
+        </div>
+    </div>
+    <!--  -->
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Customer Reason:  </label>
+                    </div>
+                    <div class="col">
+                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" style="width: 150px;">
+                            <option [ngValue]="null">--Select--</option>
+                            <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
+                            <!-- {{securityQuestion.question | translate}}</option> -->
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Contract Reason :  </label>
+                    </div>
+                    <div class="col">
+                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" style="width: 150px;">
+                            <option [ngValue]="null">--Select--</option>
+                            <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
+                            <!-- {{securityQuestion.question | translate}}</option> -->
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Roaming Deposit:  </label>
+                    </div>
+                    <div class="col">
+                        <input type="text">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Intemational Deposit:  </label>
+                    </div>
+                    <div class="col">
+                        <input type="text">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Deposit Referrence Number:  </label>
+                    </div>
+                    <div class="col">
+                        <input type="text">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-group">
+                <div class="row form-group">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
+                        <label>Deposit Recipt Date:  </label>
+                    </div>
+                    <div class="col">
+                        <input type="text">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="row text-center">
+        <div class="col form-group" style="padding-top: 5px;">
+            <button class="btn" type="submit"> Next >></button>
+        </div>
+    </div>
+    
+
+</fieldset>
+</form>

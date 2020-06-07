@@ -18,8 +18,8 @@ const routes: Routes = [
 			// }
 
 			{
-				path: 'user-management',
-				loadChildren: () => import('app/views/pages/user-management/user-management.module').then(m => m.UserManagementModule),
+				path: 'activation-activities',
+				loadChildren: () => import('app/views/pages/bulk-activation/bulk-activation.module').then(m => m.BulkActivationModule),
 			},
 		]},
 
