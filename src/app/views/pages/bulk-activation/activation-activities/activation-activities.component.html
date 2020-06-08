@@ -41,11 +41,13 @@
 
         <div class="col">
             <div class="row form-group">
-                <div class="col-4" style="text-align: right; padding: 0px;">
+                <div class="col-4" style="text-align: right; padding: 0px; padding-top: 10px;">
                     <label>Birth Date :  </label>
                 </div>
                 <div class="col">
-                    <input type="text">
+                    <input matInput [matDatepicker] = "picker" placeholder = "Choose a date">
+                        <mat-datepicker-toggle matSuffix [for] = "picker"></mat-datepicker-toggle>
+                         <mat-datepicker #picker></mat-datepicker>
                 </div>
                 
             </div>
@@ -597,11 +599,13 @@
         <div class="col">
             <div class="form-group">
                 <div class="row form-group">
-                    <div class="col-4" style="text-align: right; padding: 0px;">
+                    <div class="col-4" style="text-align: right; padding: 0px; padding-top: 10px;">
                         <label>Deposit Recipt Date:  </label>
                     </div>
                     <div class="col">
-                        <input type="text">
+                         <input matInput [matDatepicker] = "picker1" placeholder = "Choose a date">
+                        <mat-datepicker-toggle matSuffix [for] = "picker1"></mat-datepicker-toggle>
+                         <mat-datepicker #picker></mat-datepicker>
                     </div>
                 </div>
                 

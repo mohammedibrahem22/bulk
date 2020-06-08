@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 // Angular Material
-import { MatButtonModule, MatProgressBarModule, MatTabsModule, MatTooltipModule } from '@angular/material';
+import { MatButtonModule, MatProgressBarModule, MatTabsModule, MatTooltipModule, MatDatepickerModule } from '@angular/material';
 // NgBootstrap
 import { NgbProgressbarModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 // Translation
@@ -61,6 +61,7 @@ import { PermissionEffects, permissionsReducer, RoleEffects, rolesReducer } from
 		MenuHorizontalComponent,
 
 		ErrorPageComponent,
+		
 	],
 	exports: [
 		BaseComponent,
@@ -112,6 +113,7 @@ import { PermissionEffects, permissionsReducer, RoleEffects, rolesReducer } from
 		// ng-bootstrap modules
 		NgbProgressbarModule,
 		NgbTooltipModule,
+		MatDatepickerModule,
 	]
 })
 export class ThemeModule {

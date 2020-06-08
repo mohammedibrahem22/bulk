@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { BulkActivationRoutingModule } from './bulk-activation-routing.module';
 import { ActivationActivitiesComponent } from './activation-activities/activation-activities.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     BulkActivationRoutingModule,
     FormsModule,
-		ReactiveFormsModule,
+    ReactiveFormsModule,
+    MatDatepickerModule
   ]
 })
 export class BulkActivationModule { }
