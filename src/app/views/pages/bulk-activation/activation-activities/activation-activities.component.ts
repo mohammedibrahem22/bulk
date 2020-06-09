@@ -11,6 +11,12 @@ export class ActivationActivitiesComponent implements OnInit {
 
   contactInfoForm: FormGroup;
   contactInformation: ContactInformation;
+  checkboxFlag: boolean;
+  uploadedFiles: any[] = [];
+  file: any;
+  next: boolean = false;
+  isUpload: boolean = false;
+
   constructor(private contactInfoFB: FormBuilder,
 
   ) { }
@@ -23,8 +29,15 @@ export class ActivationActivitiesComponent implements OnInit {
   }
 
   saveEntity(){
-    
+    this.next = true
   }
+
+  onUpload(event) {
+    for(let file of event.files) {
+        this.uploadedFiles.push(file);
+    }
+    this.isUpload = true;
+}
   createForm() {
 		this.contactInfoForm = this.contactInfoFB.group({
 			companyName: ['', Validators.required],

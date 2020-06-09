@@ -35,6 +35,23 @@
   width: 150px;
   height: 25px;
 }
-  // form input{
-  //   padding-left: 10px;
-  // }
+
+.second-form{
+  padding-top: 30px;
+}
+
+.second-form-label{
+  font-size: 1rem;
+    font-weight: 400;
+}
+
+.ui-fileupload-buttonbar .ui-fileupload-upload {
+  display: none;
+}
+.ui-fileupload-buttonbar .ui-fileupload-cancel {
+  display: none;
+}
+
+.ui-fileupload .ui-fileupload-buttonbar .ui-button{
+  background-color: rgb(152, 184, 40);
+}
