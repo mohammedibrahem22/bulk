@@ -12,10 +12,10 @@ const routes: Routes = [
 
 	{ path: 'bass', component: BaseComponent, 
 		children: [
-			// {
-			// 	path: 'dashboard',
-			// 	loadChildren: () => import('app/views/pages/dashboard/dashboard.module').then(m => m.DashboardModule),
-			// }
+			{
+				path: '',
+				loadChildren: () => import('app/views/pages/welcome-page/welcome-page.module').then(m => m.WelcomePageModule),
+			},
 
 			{
 				path: 'activation-activities',
