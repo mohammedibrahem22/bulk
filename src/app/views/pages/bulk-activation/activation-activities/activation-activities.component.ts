@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ContactInformation } from '../model/contact-information';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'kt-activation-activities',
@@ -18,6 +19,7 @@ export class ActivationActivitiesComponent implements OnInit {
   isUpload: boolean = false;
 
   constructor(private contactInfoFB: FormBuilder,
+             private router: Router,
 
   ) { }
 
@@ -29,6 +31,8 @@ export class ActivationActivitiesComponent implements OnInit {
   }
 
   saveEntity(){
+    this.router.navigateByUrl("/bass/activation-activities/corporate-structure-information");
+    // this.router.navigate(['/bass/activation-activities/corporate-structure-information']);
     this.next = true
   }
 

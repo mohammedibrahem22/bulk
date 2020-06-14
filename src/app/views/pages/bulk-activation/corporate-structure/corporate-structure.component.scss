@@ -1,0 +1,107 @@
+.corporate-form{
+    background-color: white;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 5px;
+  }
+  
+  .corporate-form-label{
+    font-size: 1rem;
+      font-weight: 400;
+  }
+
+  fieldset{
+    border: 0px solid white;
+    // box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    color: black;
+  }
+
+  .header{
+    background-color: rgb(152, 184, 40);
+    border: 2px solid rgb(152, 184, 40); 
+    border-radius: 5px;
+    margin: 0px;
+  } 
+  
+  .header h4{
+    padding-left: 30px;
+    padding-top: 12px;
+    color: white;
+  }
+
+  .btn {
+    font-size: 80%;
+    border: 2px solid rgb(145, 141, 141);
+    letter-spacing: .1rem;
+    font-weight: bold;
+    transition: all 0.2s;
+    width: 100px;
+    height: 30px;
+    background-color:rgb(230, 223, 223);
+    // position: fixed;
+    padding: 0;
+  }
+
+  .label-width{
+    max-width: 16%
+  }
+
+  .extra{
+    border: 2px solid rgb(152, 184, 40); 
+    height: 115px;
+    margin-top: 15px;
+  }
+
+  .header1{
+    background-color: rgb(152, 184, 40);
+    border: 2px solid rgb(152, 184, 40); 
+    // border-radius: 5px;
+    margin-left: -12px;
+    width: 407px;
+    // 
+    margin-bottom: 15px;
+  }
+
+  .header1 h4{
+    padding-left: 5px;
+    padding-top: 5px;
+    color: white;
+  }
+
+  .dialog{
+      width: 600px;
+  }
+
+  .ui-dialog{
+    width: 600px;
+  }
+
+  .ui-dialog .ui-dialog-titlebar{
+      background-color: green;
+  }
+
+  .dialog-content{
+    border: 2px solid rgb(152, 184, 40);
+    padding: 15px;
+  }
+
+  .content{
+    border: 2px solid rgb(152, 184, 40); 
+    // border-radius: 5px;
+    // padding-top: 5px;
+    padding-left: 120px;
+    margin-top: 5px;
+  }
+
+  table, th, td{
+    border: 2px solid rgb(164, 165, 160); 
+    width: 130px;
+  }
+  .table{
+    width: 250px;
+    margin: 20px;
+  }
+
+//   td{
+//       width: 130px;
+//   }

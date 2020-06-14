@@ -6,17 +6,20 @@ import { ActivationActivitiesComponent } from './activation-activities/activatio
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material';
 import {FileUploadModule} from 'primeng/fileupload';
+import { CorporateStructureComponent } from './corporate-structure/corporate-structure.component';
+import {DialogModule} from 'primeng/dialog';
 
 
 @NgModule({
-  declarations: [ActivationActivitiesComponent],
+  declarations: [ActivationActivitiesComponent, CorporateStructureComponent],
   imports: [
     CommonModule,
     BulkActivationRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     MatDatepickerModule,
-    FileUploadModule
+    FileUploadModule,
+    DialogModule
   ]
 })
 export class BulkActivationModule { }

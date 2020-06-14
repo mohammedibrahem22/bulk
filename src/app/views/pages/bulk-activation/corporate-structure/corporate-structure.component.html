@@ -1,0 +1,144 @@
+<div class="header">
+    <h4>Corporate Structure Information:</h4>
+</div>
+<div class="corporate-form">
+    <form name="form" (ngSubmit)="saveEntity()" #f1="ngForm">
+        <fieldset>
+            <!-- <legend></legend> -->
+            <div class="row corporate-form-label">
+                <div class="col-3 label-width">
+                    <label style="padding-left: 28px; "> Post Production Dial:</label>
+                </div>
+                    <!-- <p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox> -->
+                <div class="col">
+                    <input [(ngModel)]="checkboxFlag" type="checkbox" name="checkbox" style="width: 18px;"/>
+                </div>
+            </div>
+
+            <div class="row corporate-form-label">
+                <div class="col-3 label-width">
+                    <label style="padding-left: 28px;"> Hirerachy Excel:</label>
+                </div>
+                    <!-- <p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox> -->
+                <div class="col">
+                    <a href="javascript:;" routerLink="">
+                        <span style="color: rgb(152, 184, 40); text-decoration: underline;"> sample</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col form-group" style="padding-top: 5px; padding-left: 35px;">
+                    <button class="btn" routerLink="/bass/activation-activities/create-corporate-acceount" style="margin-right: 5px;"> << Previous</button>
+                    <button class="btn" type="submit"> Next >></button>
+                </div>
+                <div class="col">
+                    
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-7 form-group" style="padding-top: 5px; margin-left: 50px;">
+                    <p-fileUpload #fileUploadSystem auto="true" 
+                        uploadLabel="Upload" cancelLabel="Cancel" accept="image/*"
+                        maxFileSize="1000000" name="uploadfiles" ngDefaultControl
+                        invalidFileSizeMessageSummary="invalid_file_size_title" (ngModel)="file"
+                        #image="ngModel" invalidFileSizeMessageDetail="invalid_file_size_details"
+                        invalidFileTypeMessageSummary="invalid_file_type_title"
+                        invalidFileTypeMessageDetail="invalid_file_type_details" (onSelect)="onUpload($event)">
+                    </p-fileUpload>
+                    <!-- <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload($event)"
+                                multiple="multiple" accept="image/*" maxFileSize="1000000">
+                        <ng-template pTemplate="content">
+                            <ul *ngIf="uploadedFiles.length">
+                                <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+                            </ul>
+                        </ng-template>
+                    </p-fileUpload> -->
+                </div>
+                <div class="col-4 extra" *ngIf="uploadedFiles.length > 0">
+                    <div class="header1">
+                        <h4>Extra Action:</h4>
+                    </div>
+                    <form>
+                        <fieldset>
+                            <!-- <legend></legend> -->
+                            <a href="javascript:;" (click)="showDialog()">
+                                <span style="color:blue; text-decoration: underline;"> Add Siebel Product</span>
+                            </a>
+                            <br>
+                            <a href="javascript:;" routerLink="">
+                                <span style="color: blue; text-decoration: underline;"> Add subscription Service</span>
+                            </a>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+<p-dialog [(visible)]="displayDialog" [style]="{width: '550px'}">
+    <p-header>
+        Job Actions
+    </p-header>
+    <div class="dialog-content">
+
+    
+    <div >
+        <div class="row">
+            <div class="col-3">
+                <label>Groups :  </label>
+            </div>
+            <div class="col">
+                <select name="ADMIN_Q1" [(ngModel)]="group" #ADMIN_Q1="ngModel" style="width: 100px; height: 25px;">
+                    <option [ngValue]="null">--Select--</option>
+                    <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
+                    <!-- {{securityQuestion.question | translate}}</option> -->
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <label>Siebel Products :  </label>
+            </div>
+            <div class="col">
+                <select name="ADMIN_Q1" [(ngModel)]="siebelProducts" #ADMIN_Q1="ngModel" style="width: 300px; height: 25px;">
+                    <option [ngValue]="null">DOUBLE_QUOTA_FREE</option>
+                    <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
+                    <!-- {{securityQuestion.question | translate}}</option> -->
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <table class="table">
+            <tr>
+                <td style="text-align: center;"> Durationd</td>
+                <td style="width: 130px; text-align: center;">
+                    <select name="ADMIN_Q1" [(ngModel)]="duration" #ADMIN_Q1="ngModel" style="height: 25px; width: 100px;">
+                        <option [ngValue]="null">2</option>
+                        <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
+                        <!-- {{securityQuestion.question | translate}}</option> -->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"> Extra Quota</td>
+                <td style="width: 130px; text-align: center;">
+                    <select name="ADMIN_Q1" [(ngModel)]="extraQuota" #ADMIN_Q1="ngModel" style="height: 25px; width: 100px;">
+                        <option [ngValue]="null">50%</option>
+                        <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
+                        <!-- {{securityQuestion.question | translate}}</option> -->
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <div style="padding-top: 5px;">
+        <button class="btn" (click)="addDialogInfo()"> add</button>
+    </div>
+</div>
+</p-dialog>
