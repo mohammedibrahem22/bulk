@@ -43,7 +43,13 @@
   }
 
   .label-width{
-    max-width: 16%
+    max-width: 17%
+    
+  }
+
+  .label{
+    font-size: 1rem;
+    font-weight: 400;
   }
 
   .extra{
@@ -57,7 +63,7 @@
     border: 2px solid rgb(152, 184, 40); 
     // border-radius: 5px;
     margin-left: -12px;
-    width: 407px;
+    width: 350px;
     // 
     margin-bottom: 15px;
   }

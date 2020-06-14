@@ -77,7 +77,7 @@
         </fieldset>
     </form>
 </div>
-<p-dialog [(visible)]="displayDialog" [style]="{width: '550px'}" [focusOnShow]="false">
+<p-dialog appendTo="body" [(visible)]="displayDialog" [style]="{width: '550px'}" [focusOnShow]="false">
     <p-header>
         Job Actions
     </p-header>
@@ -87,7 +87,7 @@
     <div >
         <div class="row">
             <div class="col-3">
-                <label>Groups :  </label>
+                <label class="label">Groups :  </label>
             </div>
             <div class="col">
                 <select name="ADMIN_Q1" [(ngModel)]="group" #ADMIN_Q1="ngModel" style="width: 100px; height: 25px;">
