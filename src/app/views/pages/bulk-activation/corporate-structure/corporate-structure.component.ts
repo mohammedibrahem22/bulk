@@ -12,6 +12,7 @@ export class CorporateStructureComponent implements OnInit {
   next: boolean = false;
   isUpload: boolean = false;
   disabled: boolean = true;
+  checkboxFlag: boolean;
   displayDialog: boolean = false;
   group: string;
   siebelProducts: any;
