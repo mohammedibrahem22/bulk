@@ -63,7 +63,7 @@
     border: 2px solid rgb(152, 184, 40); 
     // border-radius: 5px;
     margin-left: -12px;
-    width: 360px;
+    width: 350px;
     // 
     margin-bottom: 15px;
   }
@@ -82,9 +82,17 @@
 //     width: 600px;
 //   }
 
-  .ui-dialog .ui-dialog-titlebar{
-      background-color: green;
+  // .ui-dialog .ui-dialog-titlebar{
+      
+  // }
+
+  body .ui-dialog .ui-dialog-titlebar{
+    background-color: green;
   }
+
+  // .ui-widget-header{
+  //   background-color: green;
+  // }
 
   .dialog-content{
     border: 2px solid rgb(152, 184, 40);
