@@ -87,21 +87,48 @@
       
   // }
 
-  body .ui-dialog .ui-dialog-titlebar{
-    background-color: green;
+  // body .ui-dialog .ui-dialog-titlebar{
+  //   background-color: green;
+  // }
+
+  //custom style for p-fileupload
+  ::ng-deep .ui-fileupload .ui-fileupload-buttonbar .ui-button{
+    background-color: rgb(152, 184, 40) !important;
+    border: 0px !important;
   }
 
+  ::ng-deep .ui-button.ui-button-icon-only{
+    background-color: rgb(152, 184, 40) !important;
+    border: 0px !important;
+  } 
+
+  //custom style for p-dialog
+  ::ng-deep .ui-dialog .ui-dialog-titlebar{
+    background-color: rgb(152, 184, 40) !important;
+  }
+
+  ::ng-deep .ui-dialog .ui-dialog-content{
+    border: 1px solid rgb(152, 184, 40) !important;
+  }
+
+  ::ng-deep .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon{
+    background-color: white !important;
+    width: 25px !important;
+    height: 25px !important;
+    padding: 4px !important;
+  }
+  
   // .ui-widget-header{
   //   background-color: green;
   // }
 
   .dialog-content{
-    border: 2px solid rgb(152, 184, 40);
+    border: 1px solid rgb(152, 184, 40);
     padding: 15px;
   }
 
   .content{
-    border: 2px solid rgb(152, 184, 40); 
+    border: 1px solid rgb(152, 184, 40); 
     // border-radius: 5px;
     // padding-top: 5px;
     padding-left: 100px;
@@ -110,7 +137,7 @@
   }
 
   table, th, td{
-    border: 2px solid rgb(164, 165, 160); 
+    border: 1px solid rgb(164, 165, 160); 
     width: 130px;
   }
   .table{
