@@ -28,7 +28,7 @@ export class ContactInformation {
     paymentResponsible: boolean;
     paymentMethod: string[];
     drivingLicense: string;
-    ratePain: string[];
+    ratePaln: string[];
     handset: string;
     oldOperator: string;
     preferredChannel: string;
