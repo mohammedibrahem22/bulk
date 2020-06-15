@@ -1,0 +1,64 @@
+<div class="header">
+    <h4>Batch Job Information:</h4>
+</div>
+
+<div class="batch-job">
+    <form name="form" (ngSubmit)="saveEntity()" #f1="ngForm">
+        <!-- <div class="content"> -->
+            <div class="row">
+                <div class="col-3 label-width">
+                    <label  class="label"> Scanned Rows:</label>
+                </div>
+                    <!-- <p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox> -->
+                <div class="col">
+                    <span>3</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3 label-width">
+                    <label  class="label"> Run mode:</label>
+                </div>
+                    <!-- <p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox> -->
+                <div class="col">
+                    <select name="mode" [(ngModel)]="runMode" #ADMIN_Q1="ngModel" style="width: 100px; height: 25px;">
+                        <option [ngValue]="null">--Select--</option>
+                        <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
+                        <!-- {{securityQuestion.question | translate}}</option> -->
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3 label-width">
+                    <label  class="label" style="padding-top: 10px; "> First run:</label>
+                </div>
+                    <!-- <p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox> -->
+                <div class="col">
+                    <input matInput [matDatepicker] = "picker" placeholder = "Choose a date" [(ngModel)]="firstRun" name="firstRun">
+                        <mat-datepicker-toggle matSuffix [for] = "picker"></mat-datepicker-toggle>
+                         <mat-datepicker #picker></mat-datepicker>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3 label-width">
+                    <label  class="label" style="padding-top: 40px;"> Comments:</label>
+                </div>
+                <div class="col">
+                    <textarea rows="5" cols="50" pInputTextarea [(ngModel)]="comments" name="comments"></textarea>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col form-group" style="padding-top: 5px; padding-left: 35px;">
+                    <button class="btn" routerLink="/bass/activation-activities/corporate-structure-information" style="margin-right: 5px;"> << Previous</button>
+                    <button class="btn" type="submit"> Next >></button>
+                </div>
+                <div class="col">
+                    
+                </div>
+            </div>
+        <!-- </div> -->
+    </form>
+</div>

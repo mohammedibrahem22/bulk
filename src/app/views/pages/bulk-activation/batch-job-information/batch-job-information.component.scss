@@ -1,0 +1,44 @@
+.header{
+    background-color: rgb(152, 184, 40);
+    border: 2px solid rgb(152, 184, 40); 
+    border-radius: 5px;
+    margin: 0px;
+  } 
+  
+  .header h4{
+    padding-left: 30px;
+    padding-top: 12px;
+    color: white;
+  }
+
+  .btn {
+    font-size: 80%;
+    border: 2px solid rgb(145, 141, 141);
+    letter-spacing: .1rem;
+    font-weight: bold;
+    transition: all 0.2s;
+    width: 100px;
+    height: 30px;
+    background-color:rgb(230, 223, 223);
+    // position: fixed;
+    padding: 0;
+  }
+
+  .label-width{
+    max-width: 12%;
+    text-align: right;
+    
+  }
+
+  .label{
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  .batch-job{
+    background-color: white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 5px;
+    color: black;;
+  }

@@ -3,19 +3,19 @@
 </div>
 <div class="corporate-form">
     <form name="form" (ngSubmit)="saveEntity()" #f1="ngForm">
-        <fieldset>
+        <!-- <fieldset> -->
             <!-- <legend></legend> -->
-            <div class="row corporate-form-label">
+            <div class="row">
                 <div class="col-3 label-width">
                     <label  class="label" style="padding-left: 28px; "> Post Production Dial:</label>
                 </div>
                     <!-- <p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox> -->
                 <div class="col">
-                    <input [(ngModel)]="checkboxFlag" type="checkbox" name="checkbox" style="width: 18px;"/>
+                    <input [(ngModel)]="postProductiondial" type="checkbox" name="checkbox" style="width: 18px;"/>
                 </div>
             </div>
 
-            <div class="row corporate-form-label">
+            <div class="row">
                 <div class="col-3 label-width">
                     <label class="label" style="padding-left: 28px;"> Hirerachy Excel:</label>
                 </div>
@@ -74,7 +74,7 @@
                 </div>
             </div>
 
-        </fieldset>
+        <!-- </fieldset> -->
     </form>
 </div>
 <p-dialog appendTo="body" [(visible)]="displayDialog" [style]="{width: '550px'}" [focusOnShow]="false">
@@ -90,7 +90,7 @@
                 <label class="label">Groups :  </label>
             </div>
             <div class="col">
-                <select name="ADMIN_Q1" [(ngModel)]="group" #ADMIN_Q1="ngModel" style="width: 100px; height: 25px;">
+                <select name="groups" [(ngModel)]="group" #groups="ngModel" style="width: 100px; height: 25px;">
                     <option [ngValue]="null">--Select--</option>
                     <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                     <!-- {{securityQuestion.question | translate}}</option> -->
@@ -103,7 +103,7 @@
                 <label class="label">Siebel Products :  </label>
             </div>
             <div class="col">
-                <select name="ADMIN_Q1" [(ngModel)]="siebelProducts" #ADMIN_Q1="ngModel" style="width: 300px; height: 25px;">
+                <select name="siebel" [(ngModel)]="siebelProducts" #siebel="ngModel" style="width: 300px; height: 25px;">
                     <option [ngValue]="null">DOUBLE_QUOTA_FREE</option>
                     <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                     <!-- {{securityQuestion.question | translate}}</option> -->
@@ -115,9 +115,9 @@
     <div class="content">
         <table class="table">
             <tr>
-                <td class="label" style="text-align: center;"> Durationd</td>
+                <td class="label" style="text-align: center;"> Duration</td>
                 <td style="width: 130px; text-align: center;">
-                    <select name="ADMIN_Q1" [(ngModel)]="duration" #ADMIN_Q1="ngModel" style="height: 25px; width: 100px;">
+                    <select name="Duration" [(ngModel)]="duration" #Duration="ngModel" style="height: 25px; width: 100px;">
                         <option [ngValue]="null">2</option>
                         <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                         <!-- {{securityQuestion.question | translate}}</option> -->
@@ -127,7 +127,7 @@
             <tr>
                 <td class="label" style="text-align: center;"> Extra Quota</td>
                 <td style="width: 130px; text-align: center;">
-                    <select name="ADMIN_Q1" [(ngModel)]="extraQuota" #ADMIN_Q1="ngModel" style="height: 25px; width: 100px;">
+                    <select name="extra_quota" [(ngModel)]="extraQuota" #extra_quota="ngModel" style="height: 25px; width: 100px;">
                         <option [ngValue]="null">50%</option>
                         <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                         <!-- {{securityQuestion.question | translate}}</option> -->

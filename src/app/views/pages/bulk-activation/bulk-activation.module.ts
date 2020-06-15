@@ -8,10 +8,12 @@ import { MatDatepickerModule } from '@angular/material';
 import {FileUploadModule} from 'primeng/fileupload';
 import { CorporateStructureComponent } from './corporate-structure/corporate-structure.component';
 import {DialogModule} from 'primeng/dialog';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import { BatchJobInformationComponent } from './batch-job-information/batch-job-information.component';
 
 
 @NgModule({
-  declarations: [ActivationActivitiesComponent, CorporateStructureComponent],
+  declarations: [ActivationActivitiesComponent, CorporateStructureComponent, BatchJobInformationComponent],
   imports: [
     CommonModule,
     BulkActivationRoutingModule,
@@ -19,7 +21,8 @@ import {DialogModule} from 'primeng/dialog';
     ReactiveFormsModule,
     MatDatepickerModule,
     FileUploadModule,
-    DialogModule
+    DialogModule,
+    InputTextareaModule
   ]
 })
 export class BulkActivationModule { }

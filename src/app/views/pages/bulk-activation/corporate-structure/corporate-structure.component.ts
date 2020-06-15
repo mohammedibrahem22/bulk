@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'kt-corporate-structure',
@@ -12,18 +13,20 @@ export class CorporateStructureComponent implements OnInit {
   next: boolean = false;
   isUpload: boolean = false;
   disabled: boolean = true;
-  checkboxFlag: boolean;
+  postProductiondial: boolean;
   displayDialog: boolean = false;
   group: string;
   siebelProducts: any;
   duration: any;
   extraQuota: any;
-  constructor() { }
+  constructor(private router: Router,
+    ) { }
 
   ngOnInit() {
   }
 
   saveEntity(){
+    this.router.navigateByUrl("/bass/activation-activities/batch-job-information");
     console.log("file :", this.uploadedFiles[0].name);
     
   }
@@ -41,6 +44,8 @@ showDialog() {
 
 addDialogInfo() {
   this.displayDialog = false;
+  console.log("dialog", this.duration, this.extraQuota, this.siebelProducts, this.group, this.postProductiondial);
+  
 }
 
 }

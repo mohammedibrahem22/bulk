@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ActivationActivitiesComponent } from './activation-activities/activation-activities.component';
 import { CorporateStructureComponent } from './corporate-structure/corporate-structure.component';
+import { BatchJobInformationComponent } from './batch-job-information/batch-job-information.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,11 @@ const routes: Routes = [
   {
     path: 'corporate-structure-information',
     component: CorporateStructureComponent
-},
+  },
+  {
+    path: 'batch-job-information',
+    component: BatchJobInformationComponent
+  },
     
 ];
 

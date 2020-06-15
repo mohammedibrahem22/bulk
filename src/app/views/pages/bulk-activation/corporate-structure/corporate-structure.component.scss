@@ -1,8 +1,9 @@
 .corporate-form{
     background-color: white;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  border-radius: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 5px;
+    color: black;
   }
   
   .corporate-form-label{
@@ -10,11 +11,11 @@
       font-weight: 400;
   }
 
-  fieldset{
-    border: 0px solid white;
-    // box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
-    color: black;
-  }
+  // fieldset{
+  //   border: 0px solid white;
+  //   // box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  //   color: black;
+  // }
 
   .header{
     background-color: rgb(152, 184, 40);
@@ -63,7 +64,7 @@
     border: 2px solid rgb(152, 184, 40); 
     // border-radius: 5px;
     margin-left: -12px;
-    width: 350px;
+    width: 355px;
     // 
     margin-bottom: 15px;
   }
