@@ -33,7 +33,9 @@ export class ActivationActivitiesComponent implements OnInit {
   saveEntity(){
     this.router.navigateByUrl("/bass/activation-activities/corporate-structure-information");
     // this.router.navigate(['/bass/activation-activities/corporate-structure-information']);
-    this.next = true
+    console.log("contactInformation", this.contactInformation);
+    
+    // this.next = true
   }
 
   onUpload(event) {

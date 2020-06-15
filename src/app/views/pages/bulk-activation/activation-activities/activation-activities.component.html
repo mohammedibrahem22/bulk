@@ -13,7 +13,7 @@
                     <label>Company Name:</label>
                 </div>
                 <div class="col">
-                    <input type="text">
+                    <input type="text" [(ngModel)]="contactInformation.companyName" name="companyName" #companyName="ngModel">
 
                 </div>
             </div>
@@ -25,7 +25,11 @@
                     <label>Customer Group:</label>
                 </div>
                 <div class="col">
-                    <input type="text">
+                    <select name="customerGroup" [(ngModel)]="contactInformation.customerGroup" #customerGroup="ngModel" class="select">
+                        <option [ngValue]="null">Prepaid</option>
+                        <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
+                        <!-- {{securityQuestion.question | translate}}</option> -->
+                    </select>
                 </div>
             </div>
         </div>
@@ -33,13 +37,13 @@
     <!--  -->
     <div class="row">
         <div class="col">
-            <div class="row form-group">
+            <div class="row form-group" style="padding-top: 10px;">
                 <div class="col-4" style="text-align: right; padding: 0px;">
                     <label>First Name :  </label>
                 </div>
                 <div class="col">
 
-                    <input type="text">
+                    <input type="text" [(ngModel)]="contactInformation.firstName" name="firstName" #firstName="ngModel">
                 </div>
             </div>
         </div>
@@ -50,7 +54,7 @@
                     <label>Birth Date :  </label>
                 </div>
                 <div class="col">
-                    <input matInput [matDatepicker] = "picker" placeholder = "Choose a date">
+                    <input matInput [matDatepicker] = "picker" placeholder = "Choose a date" [(ngModel)]="contactInformation.birthDate" name="birthDate" #birthDate="ngModel">
                         <mat-datepicker-toggle matSuffix [for] = "picker"></mat-datepicker-toggle>
                          <mat-datepicker #picker></mat-datepicker>
                 </div>
@@ -66,7 +70,7 @@
                     <label>Last Name :  </label>
                 </div>
                 <div class="col">
-                    <input type="text">
+                    <input type="text" [(ngModel)]="contactInformation.lastName" name="lastName" #lastName="ngModel">
                 </div>
                 
             </div>
@@ -79,7 +83,7 @@
                     <label>Area :  </label>
                 </div>
                 <div class="col">
-                    <input type="text">
+                    <input type="text" [(ngModel)]="contactInformation.area" name="area" #area="ngModel">
                 </div>
             </div>
         </div>
@@ -95,7 +99,7 @@
                         <label>House Number :  </label>
                     </div>
                     <div class="col">
-                        <input type="text">
+                        <input type="text" [(ngModel)]="contactInformation.houseNumber" name="houseNumber" #houseNumber="ngModel">
                     </div>
                 </div>
             </div>
@@ -108,7 +112,7 @@
                         <label>Contract Responsible :  </label>
                     </div>
                     <div class="col">
-                        <input type="text">
+                        <input type="checkbox" [(ngModel)]="contactInformation.contractResponsible" name="contractResponsible" #contractResponsible="ngModel" style="width: 18px;">
                     </div>
                 </div>
                 
@@ -124,7 +128,7 @@
                         <label>Street :  </label>
                     </div>
                     <div class="col">
-                        <input type="text" style="width: 600px;">
+                        <input type="text" style="width: 600px;" [(ngModel)]="contactInformation.street" name="street" #street="ngModel">
                     </div>
                 </div>
             </div>
@@ -144,7 +148,7 @@
                         <label>City :  </label>
                     </div>
                     <div class="col">
-                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" class="select">
+                        <select name="city" [(ngModel)]="contactInformation.city" #city="ngModel" class="select">
                             <option [ngValue]="null">--Select--</option>
                             <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                             <!-- {{securityQuestion.question | translate}}</option> -->
@@ -162,7 +166,7 @@
                         <label>Bill Cycle :  </label>
                     </div>
                     <div class="col">
-                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" class="select">
+                        <select name="billCycle" [(ngModel)]="contactInformation.billCycle" #billcycle="ngModel" class="select">
                             <option [ngValue]="null">--Select--</option>
                             <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                             <!-- {{securityQuestion.question | translate}}</option> -->
@@ -181,7 +185,7 @@
                         <label>Country :  </label>
                     </div>
                     <div class="col">
-                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" class="select">
+                        <select name="country" [(ngModel)]="contactInformation.country" #country="ngModel" class="select">
                             <option [ngValue]="null">--Select--</option>
                             <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                             <!-- {{securityQuestion.question | translate}}</option> -->
@@ -199,7 +203,7 @@
                         <label>Credit Limit :  </label>
                     </div>
                     <div class="col">
-                        <input type="text">
+                        <input type="text" [(ngModel)]="contactInformation.creditLimit" name="creditLimit" #creditLimit="ngModel">
                     </div>
                 </div>
                 
@@ -215,7 +219,7 @@
                         <label>Contact Phone Number :  </label>
                     </div>
                     <div class="col">
-                        <input type="text">
+                        <input type="text" [(ngModel)]="contactInformation.contactPhoneNumber" name="contactPhoneNumber" #contactPhoneNumber="ngModel">
                     </div>
                 </div>
                 
@@ -229,7 +233,7 @@
                         <label>Payment Responsible :  </label>
                     </div>
                     <div class="col">
-                        <input type="text">
+                        <input type="checkbox" [(ngModel)]="contactInformation.paymentResponsible" name="paymentResponsible" #paymentResponsible="ngModel" style="width: 18px;">
                     </div>
                 </div>
                 
@@ -245,7 +249,7 @@
                         <label>Search Code :  </label>
                     </div>
                     <div class="col">
-                        <input type="text">
+                        <input type="text" [(ngModel)]="contactInformation.searchCode" name="searchCode" #searchCode="ngModel">
                     </div>
                 </div>
                 
@@ -259,7 +263,7 @@
                         <label>Payment Method :  </label>
                     </div>
                     <div class="col">
-                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" class="select">
+                        <select name="paymentMethod" [(ngModel)]="contactInformation.paymentMethod" #paymentMathod="ngModel" class="select">
                             <option [ngValue]="null">--Cash--</option>
                             <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                             <!-- {{securityQuestion.question | translate}}</option> -->
@@ -279,7 +283,7 @@
                         <label>Trade :  </label>
                     </div>
                     <div class="col">
-                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" class="select">
+                        <select name="trade" [(ngModel)]="contactInformation.trade" #trade="ngModel" class="select">
                             <option [ngValue]="null">--Trade--</option>
                             <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                             <!-- {{securityQuestion.question | translate}}</option> -->
@@ -297,7 +301,7 @@
                         <label>Driving License :  </label>
                     </div>
                     <div class="col">
-                        <input type="text">
+                        <input type="text" [(ngModel)]="contactInformation.drivingLicense" name="drivingLicense" #drivingLicense="ngModel">
                     </div>
                 </div>
                 
@@ -313,7 +317,7 @@
                         <label>Job Description :  </label>
                     </div>
                     <div class="col">
-                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" class="select">
+                        <select name="jobDescription" [(ngModel)]="contactInformation.jobDescription" #jobDescription="ngModel" class="select">
                             <option [ngValue]="null">--Select--</option>
                             <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                             <!-- {{securityQuestion.question | translate}}</option> -->
@@ -331,7 +335,7 @@
                         <label>Rate Plan:  </label>
                     </div>
                     <div class="col">
-                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" class="select">
+                        <select name="ratePlan" [(ngModel)]="contactInformation.ratePlan" #ratePlan="ngModel" class="select">
                             <option [ngValue]="null">--Select--</option>
                             <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                             <!-- {{securityQuestion.question | translate}}</option> -->
@@ -351,7 +355,7 @@
                         <label>Customer Rateplan:  </label>
                     </div>
                     <div class="col">
-                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" class="select">
+                        <select name="customerRateplan" [(ngModel)]="contactInformation.customerRateplan" #customerRateplan="ngModel" class="select">
                             <option [ngValue]="null">--Select--</option>
                             <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                             <!-- {{securityQuestion.question | translate}}</option> -->
@@ -375,7 +379,7 @@
                         <label>Nationality :  </label>
                     </div>
                     <div class="col">
-                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" class="select">
+                        <select name="nationality" [(ngModel)]="contactInformation.nationality" #nationality="ngModel" class="select">
                             <option [ngValue]="null">Egypt</option>
                             <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                             <!-- {{securityQuestion.question | translate}}</option> -->
@@ -393,7 +397,7 @@
                         <label>Handset:  </label>
                     </div>
                     <div class="col">
-                        <input type="text">
+                        <input type="text" [(ngModel)]="contactInformation.handset" name="handset" #handset="ngModel">
                     </div>
                 </div>
                 
@@ -409,7 +413,7 @@
                         <label>Id Document:  </label>
                     </div>
                     <div class="col">
-                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" class="select">
+                        <select name="idDocument" [(ngModel)]="contactInformation.idDocument" #idDocument="ngModel" class="select">
                             <option [ngValue]="null">--Select--</option>
                             <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                             <!-- {{securityQuestion.question | translate}}</option> -->
@@ -427,7 +431,7 @@
                         <label>Old Operator:  </label>
                     </div>
                     <div class="col">
-                        <input type="text">
+                        <input type="text" [(ngModel)]="contactInformation.oldOperator" name="oldOperator" #oldOperator="ngModel">
                     </div>
                 </div>
                 
@@ -443,7 +447,7 @@
                         <label>Id Document Number:  </label>
                     </div>
                     <div class="col">
-                        <input type="text">
+                        <input type="text" [(ngModel)]="contactInformation.idDocumentNumber" name="idDocumentNumber" #idDocumentNumber="ngModel">
                     </div>
                 </div>
                 
@@ -457,7 +461,7 @@
                         <label>Preferred Channel:  </label>
                     </div>
                     <div class="col">
-                        <input type="text">
+                        <input type="text" [(ngModel)]="contactInformation.preferredChannel" name="preferredChannel" #preferredChannel="ngModel">
                     </div>
                 </div>
                 
@@ -472,7 +476,7 @@
                         <label>Sales Channel:  </label>
                     </div>
                     <div class="col">
-                        <input type="text" >
+                        <input type="text" [(ngModel)]="contactInformation.salesChannel" name="salesChannel" #salesChannel="ngModel">
                     </div>
                 </div>
                 
@@ -486,7 +490,7 @@
                         <label>Sales Force Id:  </label>
                     </div>
                     <div class="col">
-                        <input type="text">
+                        <input type="text" [(ngModel)]="contactInformation.salesForceId" name="salesForceId" #salesForceId="ngModel">
                     </div>
                 </div>
                 
@@ -502,7 +506,7 @@
                         <label>Language:  </label>
                     </div>
                     <div class="col">
-                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" class="select">
+                        <select name="language" [(ngModel)]="contactInformation.language" #language="ngModel" class="select">
                             <option [ngValue]="null">Arabic</option>
                             <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                             <!-- {{securityQuestion.question | translate}}</option> -->
@@ -526,7 +530,7 @@
                         <label>Customer Reason:  </label>
                     </div>
                     <div class="col">
-                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" class="select">
+                        <select name="customerReason" [(ngModel)]="contactInformation.customerReason" #customerReason="ngModel" class="select">
                             <option [ngValue]="null">--Select--</option>
                             <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                             <!-- {{securityQuestion.question | translate}}</option> -->
@@ -544,7 +548,7 @@
                         <label>Contract Reason :  </label>
                     </div>
                     <div class="col">
-                        <select name="ADMIN_Q1" [(ngModel)]="contactInformation.city" #ADMIN_Q1="ngModel" class="select">
+                        <select name="contractReason" [(ngModel)]="contactInformation.contractReason" #contractReason="ngModel" class="select">
                             <option [ngValue]="null">--Select--</option>
                             <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                             <!-- {{securityQuestion.question | translate}}</option> -->
@@ -564,7 +568,7 @@
                         <label>Roaming Deposit:  </label>
                     </div>
                     <div class="col">
-                        <input type="text">
+                        <input type="text" [(ngModel)]="contactInformation.roamingDeposit" name="roamingDeposit" #roamingDeposit="ngModel">
                     </div>
                 </div>
                 
@@ -578,7 +582,7 @@
                         <label>Intemational Deposit:  </label>
                     </div>
                     <div class="col">
-                        <input type="text">
+                        <input type="text" [(ngModel)]="contactInformation.intemationalDeposit" name="intemationalDeposit" #intemationalDeposit="ngModel">
                     </div>
                 </div>
                 
@@ -594,7 +598,7 @@
                         <label>Deposit Referrence Number:  </label>
                     </div>
                     <div class="col">
-                        <input type="text">
+                        <input type="text" [(ngModel)]="contactInformation.depositReferenceNumber" name="depositReferenceNumber" #depositReferenceNumber="ngModel">
                     </div>
                 </div>
                 
@@ -608,7 +612,8 @@
                         <label>Deposit Recipt Date:  </label>
                     </div>
                     <div class="col">
-                         <input matInput [matDatepicker] = "picker2" placeholder = "Choose a date">
+                         <input matInput [matDatepicker] = "picker2" placeholder = "Choose a date"
+                         [(ngModel)]="contactInformation.depositReceiptDate" name="depositReceiptDate" #depositReceiptDate="ngModel">
                         <mat-datepicker-toggle matSuffix [for] = "picker2"></mat-datepicker-toggle>
                          <mat-datepicker #picker2></mat-datepicker>
                     </div>
