@@ -24,7 +24,10 @@ export class ActivationActivitiesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.contactInformation = JSON.parse(localStorage.getItem('testObject'));
+    if(JSON.parse(localStorage.getItem('testObject'))){
+      this.contactInformation = JSON.parse(localStorage.getItem('testObject'));
+
+    }
     // this.contactInformation = new ContactInformation();
     this.createForm();
     console.log("this.contactInformation", this.contactInformation);
