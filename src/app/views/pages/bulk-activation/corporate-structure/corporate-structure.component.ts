@@ -27,7 +27,7 @@ export class CorporateStructureComponent implements OnInit {
 
   saveEntity(){
     this.router.navigateByUrl("/bass/activation-activities/batch-job-information");
-    console.log("file :", this.uploadedFiles[0].name);
+    // console.log("file :", this.uploadedFiles[0].name);
     
   }
 
