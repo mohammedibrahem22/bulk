@@ -50,11 +50,11 @@
 
         <div class="col">
             <div class="row form-group">
-                <div class="col-4" style="text-align: right; padding: 0px; padding-top: 2px;">
+                <div class="col-4" style="text-align: right; padding: 0px; padding-top: 9px;">
                     <label>Birth Date :  </label>
                 </div>
                 <div class="col">
-                    <input matInput [matDatepicker] = "picker" placeholder = "Choose a date" [(ngModel)]="contactInformation.birthDate" name="birthDate" #birthDate="ngModel">
+                    <input matInput [matDatepicker] = "picker" placeholder = "Choose a date" [(ngModel)]="contactInformation.birthDate">
                         <mat-datepicker-toggle matSuffix [for] = "picker"></mat-datepicker-toggle>
                          <mat-datepicker #picker></mat-datepicker>
                 </div>
@@ -613,7 +613,7 @@
                     </div>
                     <div class="col">
                          <input matInput [matDatepicker] = "picker2" placeholder = "Choose a date"
-                         [(ngModel)]="contactInformation.depositReceiptDate" name="depositReceiptDate" #depositReceiptDate="ngModel">
+                         [(ngModel)]="contactInformation.depositReceiptDate">
                         <mat-datepicker-toggle matSuffix [for] = "picker2"></mat-datepicker-toggle>
                          <mat-datepicker #picker2></mat-datepicker>
                     </div>
