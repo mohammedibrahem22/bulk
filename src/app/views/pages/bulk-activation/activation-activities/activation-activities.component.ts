@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class ActivationActivitiesComponent implements OnInit {
 
   contactInfoForm: FormGroup;
-  contactInformation: ContactInformation;
+  contactInformation: ContactInformation = new ContactInformation();
   checkboxFlag: boolean;
   uploadedFiles: any[] = [];
   file: any;
@@ -24,8 +24,10 @@ export class ActivationActivitiesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.contactInformation = new ContactInformation();
+    this.contactInformation = JSON.parse(localStorage.getItem('testObject'));
+    // this.contactInformation = new ContactInformation();
     this.createForm();
+    console.log("this.contactInformation", this.contactInformation);
     console.log("form", this.contactInfoForm);
     
   }
@@ -33,6 +35,7 @@ export class ActivationActivitiesComponent implements OnInit {
   saveEntity(){
     this.router.navigateByUrl("/bass/activation-activities/corporate-structure-information");
     // this.router.navigate(['/bass/activation-activities/corporate-structure-information']);
+    localStorage.setItem('testObject', JSON.stringify(this.contactInformation));
     console.log("contactInformation", this.contactInformation);
     
     // this.next = true
