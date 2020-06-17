@@ -88,7 +88,11 @@
                     <td style="text-align: center;"> {{option.siebelProducts}}</td>
                     <td style="text-align: center;"> {{option.duration}}</td>
                     <td style="text-align: center;"> {{option.extraQuota}}</td>
-                    <td style="text-align: center;"> <a href="javascript:;"  (click)="deleteOption(option, i)"><i class="icon-trash"></i> Delete</a></td>
+                    <td style="text-align: center;"> 
+                        <a href="javascript:;"  (click)="deleteOption(option, i)">
+                            <span style="color: rgb(152, 184, 40);"> Delete</span> 
+                         </a>
+                    </td>
                 </tr>
                 <tr *ngIf="siebelOptions.length == 0"> 
                    <td colspan="5"> No options </td> 
