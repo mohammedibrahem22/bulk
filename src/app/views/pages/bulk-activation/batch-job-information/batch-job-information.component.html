@@ -10,8 +10,12 @@
                     <label  class="label"> Scanned Rows:</label>
                 </div>
                     <!-- <p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox> -->
-                <div class="col">
+                <div class="col-6">
                     <span>3</span>
+                </div>
+
+                <div class="col-3" style="text-align: right;">
+                    <button class="btn" (click)="showOption()"> Show Options </button>
                 </div>
             </div>
 
@@ -22,7 +26,7 @@
                     <!-- <p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox> -->
                 <div class="col">
                     <select name="mode" [(ngModel)]="runMode" #ADMIN_Q1="ngModel" style="width: 100px; height: 25px;">
-                        <option [ngValue]="null">--Select--</option>
+                        <option [ngValue]="Scheduled">Scheduled</option>
                         <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                         <!-- {{securityQuestion.question | translate}}</option> -->
                     </select>
@@ -35,7 +39,8 @@
                 </div>
                     <!-- <p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox> -->
                 <div class="col">
-                    <input matInput [matDatepicker] = "picker" placeholder = "Choose a date" [(ngModel)]="firstRun" name="firstRun">
+                    <input matInput [matDatepicker] = "picker" placeholder = "Choose a date" [(ngModel)]="firstRun" name="firstRun" 
+                            style="width: 200px;">
                         <mat-datepicker-toggle matSuffix [for] = "picker"></mat-datepicker-toggle>
                          <mat-datepicker #picker></mat-datepicker>
                 </div>
@@ -62,3 +67,32 @@
         <!-- </div> -->
     </form>
 </div>
+
+<!-- Option Dialog -->
+<p-dialog appendTo="body" [(visible)]="showOptionsDialog" [style]="{width: '550px'}" [focusOnShow]="false">
+    <p-header>
+        Options
+    </p-header>
+        <div style="padding-top: 10px;">
+            <table class="option-table">
+                <tr>
+                    <th style="text-align: center;">Group</th>
+                    <th style="text-align: center;">Siebel Product</th>
+                    <th style="text-align: center;">Duration</th>
+                    <th style="text-align: center;">Extra Quota</th>
+                    <th style="text-align: center;">Delete</th>
+                </tr>
+        
+                <tr *ngFor="let option of siebelOptions ;let i = index">
+                    <td style="text-align: center;"> {{option.group}}</td>
+                    <td style="text-align: center;"> {{option.siebelProducts}}</td>
+                    <td style="text-align: center;"> {{option.duration}}</td>
+                    <td style="text-align: center;"> {{option.extraQuota}}</td>
+                    <td style="text-align: center;"> <a href="javascript:;"  (click)="deleteOption(option, i)"><i class="icon-trash"></i> Delete</a></td>
+                </tr>
+                <tr *ngIf="siebelOptions.length == 0"> 
+                   <td colspan="5"> No options </td> 
+                </tr>
+            </table>
+        </div>
+</p-dialog>

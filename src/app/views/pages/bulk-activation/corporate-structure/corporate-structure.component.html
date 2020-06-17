@@ -90,8 +90,8 @@
                 <label class="label">Groups :  </label>
             </div>
             <div class="col">
-                <select name="groups" [(ngModel)]="group" #groups="ngModel" style="width: 100px; height: 25px;">
-                    <option [ngValue]="null">--Select--</option>
+                <select name="groups" [(ngModel)]="siebelProduct.group" #groups="ngModel" style="width: 100px; height: 25px;">
+                    <option value="etisalat">Etisalat</option>
                     <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                     <!-- {{securityQuestion.question | translate}}</option> -->
                 </select>
@@ -103,8 +103,8 @@
                 <label class="label">Siebel Products :  </label>
             </div>
             <div class="col">
-                <select name="siebel" [(ngModel)]="siebelProducts" #siebel="ngModel" style="width: 300px; height: 25px;">
-                    <option [ngValue]="null">DOUBLE_QUOTA_FREE</option>
+                <select name="siebel" [(ngModel)]="siebelProduct.siebelProducts" #siebel="ngModel" style="width: 300px; height: 25px;">
+                    <option value="DOUBLE_QUOTA_FREE">DOUBLE_QUOTA_FREE</option>
                     <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                     <!-- {{securityQuestion.question | translate}}</option> -->
                 </select>
@@ -117,8 +117,8 @@
             <tr>
                 <td class="label" style="text-align: center;"> Duration</td>
                 <td style="width: 130px; text-align: center;">
-                    <select name="Duration" [(ngModel)]="duration" #Duration="ngModel" style="height: 25px; width: 100px;">
-                        <option [ngValue]="null">2</option>
+                    <select name="Duration" [(ngModel)]="siebelProduct.duration" #Duration="ngModel" style="height: 25px; width: 100px;">
+                        <option [ngValue]="2">2</option>
                         <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                         <!-- {{securityQuestion.question | translate}}</option> -->
                     </select>
@@ -127,8 +127,8 @@
             <tr>
                 <td class="label" style="text-align: center;"> Extra Quota</td>
                 <td style="width: 130px; text-align: center;">
-                    <select name="extra_quota" [(ngModel)]="extraQuota" #extra_quota="ngModel" style="height: 25px; width: 100px;">
-                        <option [ngValue]="null">50%</option>
+                    <select name="extra_quota" [(ngModel)]="siebelProduct.extraQuota" #extra_quota="ngModel" style="height: 25px; width: 100px;">
+                        <option [ngValue]="50">50%</option>
                         <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                         <!-- {{securityQuestion.question | translate}}</option> -->
                     </select>
@@ -140,5 +140,23 @@
     <div style="padding-top: 5px;">
         <button class="btn" (click)="addDialogInfo()"> Add</button>
     </div>
+</div>
+<div *ngIf="siebelOptions.length > 0" style="padding-top: 10px;">
+    <table class="option-table">
+        <tr>
+            <th style="text-align: center;">Group</th>
+            <th style="text-align: center;">Siebel Product</th>
+            <th style="text-align: center;">Duration</th>
+            <th style="text-align: center;">Extra Quota</th>
+        </tr>
+
+        <tr *ngFor="let option of siebelOptions">
+            <td style="text-align: center;"> {{option.group}}</td>
+            <td style="text-align: center;"> {{option.siebelProducts}}</td>
+            <td style="text-align: center;"> {{option.duration}}</td>
+            <td style="text-align: center;"> {{option.extraQuota}}</td>
+        </tr>
+        
+    </table>
 </div>
 </p-dialog>

@@ -42,3 +42,33 @@
     border-radius: 5px;
     color: black;;
   }
+
+  .option-table{
+    width: 100%;
+  }
+
+  table, th, td{
+    border: 1px solid rgb(164, 165, 160); 
+    width: 130px;
+  }
+
+  //custom style for p-dialog
+  ::ng-deep .ui-dialog .ui-dialog-titlebar{
+    background-color: rgb(152, 184, 40) !important;
+  }
+
+  ::ng-deep .ui-dialog .ui-dialog-content{
+    border: 1px solid rgb(152, 184, 40) !important;
+  }
+
+  ::ng-deep .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon{
+    background-color: white !important;
+    width: 25px !important;
+    height: 25px !important;
+    padding: 4px !important;
+  }
+
+  .dialog-content{
+    border: 1px solid rgb(152, 184, 40);
+    padding: 15px;
+  }

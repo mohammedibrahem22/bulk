@@ -264,7 +264,7 @@
                     </div>
                     <div class="col">
                         <select name="paymentMethod" [(ngModel)]="contactInformation.paymentMethod" #paymentMathod="ngModel" class="select">
-                            <option [ngValue]="null">--Cash--</option>
+                            <option [ngValue]="Cash">Cash</option>
                             <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                             <!-- {{securityQuestion.question | translate}}</option> -->
                         </select>
@@ -284,7 +284,7 @@
                     </div>
                     <div class="col">
                         <select name="trade" [(ngModel)]="contactInformation.trade" #trade="ngModel" class="select">
-                            <option [ngValue]="null">--Trade--</option>
+                            <option [ngValue]="Trade">Trade</option>
                             <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                             <!-- {{securityQuestion.question | translate}}</option> -->
                         </select>
@@ -380,7 +380,7 @@
                     </div>
                     <div class="col">
                         <select name="nationality" [(ngModel)]="contactInformation.nationality" #nationality="ngModel" class="select">
-                            <option [ngValue]="null">Egypt</option>
+                            <option [ngValue]="Egypt">Egypt</option>
                             <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                             <!-- {{securityQuestion.question | translate}}</option> -->
                         </select>
@@ -507,7 +507,7 @@
                     </div>
                     <div class="col">
                         <select name="language" [(ngModel)]="contactInformation.language" #language="ngModel" class="select">
-                            <option [ngValue]="null">Arabic</option>
+                            <option [ngValue]="Arabic">Arabic</option>
                             <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                             <!-- {{securityQuestion.question | translate}}</option> -->
                         </select>

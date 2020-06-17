@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SiebelProduct } from '../model/siebel-product';
 
 @Component({
   selector: 'kt-corporate-structure',
@@ -15,10 +16,10 @@ export class CorporateStructureComponent implements OnInit {
   disabled: boolean = true;
   postProductiondial: boolean;
   displayDialog: boolean = false;
-  group: string;
-  siebelProducts: any;
-  duration: any;
-  extraQuota: any;
+  siebelProduct: SiebelProduct = new SiebelProduct();
+
+  siebelOptions: SiebelProduct[] = [];
+  
   constructor(private router: Router,
     ) { }
 
@@ -43,8 +44,14 @@ showDialog() {
 }
 
 addDialogInfo() {
-  this.displayDialog = false;
-  console.log("dialog", this.duration, this.extraQuota, this.siebelProducts, this.group, this.postProductiondial);
+  // this.displayDialog = false;
+  
+  this.siebelOptions.push(this.siebelProduct);
+
+  localStorage.setItem('siebelOption', JSON.stringify(this.siebelOptions));
+
+  console.log("dialog", this.siebelOptions);
+  console.log("dialog", this.siebelOptions.length);
   
 }
 
