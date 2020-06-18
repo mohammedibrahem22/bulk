@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SiebelProduct } from '../model/siebel-product';
+import { BatchJobInfo } from '../model/batch-job-info';
 
 @Component({
   selector: 'kt-batch-job-information',
@@ -9,9 +10,7 @@ import { SiebelProduct } from '../model/siebel-product';
 })
 export class BatchJobInformationComponent implements OnInit {
 
-  runMode: any;
-  firstRun: any;
-  comments:any;
+  batchJobInfo: BatchJobInfo = new BatchJobInfo();
   showOptionsDialog: boolean = false;
 
   siebelOptions: SiebelProduct[] = [];
@@ -23,14 +22,18 @@ export class BatchJobInformationComponent implements OnInit {
       this.siebelOptions = JSON.parse(localStorage.getItem('siebelOption'));
     }
 
+    if(JSON.parse(localStorage.getItem('batchJobInfo'))){
+      this.batchJobInfo = JSON.parse(localStorage.getItem('batchJobInfo'));
+    }
+
     console.log("siebelOptions :",  this.siebelOptions);
     
   }
 
   saveEntity(){
     // this.router.navigateByUrl("/bass/activation-activities/batch-job-information");
-    console.log("form :", this.runMode, this.firstRun, this.comments);
-    
+    console.log("form :", this.batchJobInfo);
+    localStorage.setItem('batchJobInfo', JSON.stringify(this.batchJobInfo));
   }
 
   showOption(){

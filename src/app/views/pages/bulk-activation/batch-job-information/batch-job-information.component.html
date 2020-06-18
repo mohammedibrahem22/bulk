@@ -25,7 +25,7 @@
                 </div>
                     <!-- <p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox> -->
                 <div class="col">
-                    <select name="mode" [(ngModel)]="runMode" #ADMIN_Q1="ngModel" style="width: 100px; height: 25px;">
+                    <select name="mode" [(ngModel)]="batchJobInfo.runMode" #ADMIN_Q1="ngModel" style="width: 100px; height: 25px;">
                         <option value="Scheduled">Scheduled</option>
                         <!-- <option *ngFor="let securityQuestion of securityQuestions" [ngValue]="securityQuestion.question"> -->
                         <!-- {{securityQuestion.question | translate}}</option> -->
@@ -39,7 +39,7 @@
                 </div>
                     <!-- <p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox> -->
                 <div class="col">
-                    <input matInput [matDatepicker] = "picker" placeholder = "Choose a date" [(ngModel)]="firstRun" name="firstRun" 
+                    <input matInput [matDatepicker] = "picker" placeholder = "Choose a date" [(ngModel)]="batchJobInfo.firstRun" name="firstRun" 
                             style="width: 200px;">
                         <mat-datepicker-toggle matSuffix [for] = "picker"></mat-datepicker-toggle>
                          <mat-datepicker #picker></mat-datepicker>
@@ -51,7 +51,7 @@
                     <label  class="label"> Comments:</label>
                 </div>
                 <div class="col">
-                    <textarea rows="5" cols="50" pInputTextarea [(ngModel)]="comments" name="comments"></textarea>
+                    <textarea rows="5" cols="50" pInputTextarea [(ngModel)]="batchJobInfo.comments" name="comments"></textarea>
                 </div>
             </div>
 

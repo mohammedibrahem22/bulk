@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SiebelProduct } from '../model/siebel-product';
+import { CorporateStructureInfo } from '../model/corporate-structure-info';
 
 @Component({
   selector: 'kt-corporate-structure',
@@ -9,14 +10,16 @@ import { SiebelProduct } from '../model/siebel-product';
 })
 export class CorporateStructureComponent implements OnInit {
 
-  uploadedFiles: any[] = [];
+  
   file: any;
   next: boolean = false;
   isUpload: boolean = false;
   disabled: boolean = true;
-  postProductiondial: boolean;
+  fileName: string;
+  
   displayDialog: boolean = false;
   siebelProduct: SiebelProduct = new SiebelProduct();
+  corporateStructureInfo: CorporateStructureInfo = new CorporateStructureInfo();
 
   siebelOptions: SiebelProduct[] = [];
   
@@ -24,17 +27,26 @@ export class CorporateStructureComponent implements OnInit {
     ) { }
 
   ngOnInit() {
+    if(JSON.parse(localStorage.getItem('siebelOption'))){
+      this.siebelOptions = JSON.parse(localStorage.getItem('siebelOption'));
+    }
+
+    if(JSON.parse(localStorage.getItem('corporateStructureInfo'))){
+      this.corporateStructureInfo = JSON.parse(localStorage.getItem('corporateStructureInfo'));
+    }
   }
 
   saveEntity(){
     this.router.navigateByUrl("/bass/activation-activities/batch-job-information");
-    // console.log("file :", this.uploadedFiles[0].name);
+    console.log("file :", this.corporateStructureInfo);
+    localStorage.setItem('corporateStructureInfo', JSON.stringify(this.corporateStructureInfo));
     
   }
 
   onUpload(event) {
     for(let file of event.files) {
-        this.uploadedFiles.push(file);
+      // this.fileName = file.name;
+        this.corporateStructureInfo.uploadedFiles.push(file);
     }
     this.isUpload = true;
 }

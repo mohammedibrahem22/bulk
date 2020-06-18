@@ -11,7 +11,7 @@
                 </div>
                     <!-- <p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox> -->
                 <div class="col">
-                    <input [(ngModel)]="postProductiondial" type="checkbox" name="checkbox" style="width: 18px;"/>
+                    <input [(ngModel)]="corporateStructureInfo.postProductiondial" type="checkbox" name="checkbox" style="width: 18px;"/>
                 </div>
             </div>
 
@@ -41,7 +41,7 @@
                     <p-fileUpload #fileUploadSystem auto="true" 
                         uploadLabel="Upload" cancelLabel="Cancel" accept="image/*"
                         maxFileSize="1000000" name="uploadfiles" ngDefaultControl
-                        invalidFileSizeMessageSummary="invalid_file_size_title" (ngModel)="file"
+                        invalidFileSizeMessageSummary="invalid_file_size_title" (ngModel)="corporateStructureInfo.uploadedFiles"
                         #image="ngModel" invalidFileSizeMessageDetail="invalid_file_size_details"
                         invalidFileTypeMessageSummary="invalid_file_type_title"
                         invalidFileTypeMessageDetail="invalid_file_type_details" (onSelect)="onUpload($event)">
@@ -55,7 +55,7 @@
                         </ng-template>
                     </p-fileUpload> -->
                 </div>
-                <div class="col-4 extra" *ngIf="uploadedFiles.length > 0">
+                <div class="col-4 extra" *ngIf="corporateStructureInfo.uploadedFiles.length > 0">
                     <div class="header1">
                         <h4>Extra Action:</h4>
                     </div>
@@ -73,6 +73,14 @@
                     </form>
                 </div>
             </div>
+            <!-- <div class="row">
+                <div class="col">
+                    <label> Selected file :</label>
+                    <span>{{fileName}}</span> -->
+                    <!-- <img src="{{corporateStructureInfo.uploadedFiles[0].objectURL.changingThisBreaksApplicationSecurity}}" class="img"
+                     style=" width:300px !important; height: 200px !important"> -->
+                <!-- </div>
+            </div> -->
 
         <!-- </fieldset> -->
     </form>
