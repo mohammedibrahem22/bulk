@@ -3,7 +3,7 @@
 </div>
 <div class="contact-form">
     <!-- f1.form.valid &&  -->
-<form name="form" (ngSubmit)="saveEntity()" #f1="ngForm" class="kt-form kt-form--group-seperator-dashed">
+<form name="f1" (ngSubmit)="f1.form.valid && submitFirstForm(f1)" #f1="ngForm" class="kt-form kt-form--group-seperator-dashed">
     <fieldset>
         <!-- <legend>Defualt contact information:</legend> -->
     <div class="row">
@@ -14,8 +14,15 @@
                 </div>
                 <div class="col">
                     <input type="text" [(ngModel)]="contactInformation.companyName" name="companyName" #companyName="ngModel">
+                    
+                    <!-- required 
+                            [ngClass]="{ 'is-invalid': isFirstFormSubmitted && companyName.invalid }">
 
+                    <div *ngIf="isFirstFormSubmitted && companyName.invalid" class="invalid-feedback">
+                        <div class="text-danger" *ngIf="companyName.errors?.required">Required</div>
+                    </div> -->
                 </div>
+
             </div>
         </div>
 
@@ -37,7 +44,7 @@
     <!--  -->
     <div class="row">
         <div class="col">
-            <div class="row form-group" style="padding-top: 5px;">
+            <div class="row form-group">
                 <div class="col-4" style="text-align: right; padding: 0px;">
                     <label>First Name :  </label>
                 </div>
@@ -50,10 +57,10 @@
 
         <div class="col">
             <div class="row form-group">
-                <div class="col-4" style="text-align: right; padding: 0px; padding-top: 7px;">
+                <div class="col-4" style="text-align: right; padding: 0px;">
                     <label>Birth Date :  </label>
                 </div>
-                <div class="col">
+                <div class="col" style="margin-top: -8px; margin-bottom: -8px;">
                     <input matInput [matDatepicker] = "picker" placeholder = "Choose a date" [(ngModel)]="contactInformation.birthDate" name="birthDate">
                         <mat-datepicker-toggle matSuffix [for] = "picker"></mat-datepicker-toggle>
                          <mat-datepicker #picker></mat-datepicker>
@@ -111,7 +118,7 @@
                     <div class="col-4" style="text-align: right; padding: 0px;">
                         <label>Contract Responsible :  </label>
                     </div>
-                    <div class="col">
+                    <div class="col" style="margin-bottom: -8px;">
                         <input type="checkbox" [(ngModel)]="contactInformation.contractResponsible" name="contractResponsible" #contractResponsible="ngModel" style="width: 18px;">
                     </div>
                 </div>
@@ -232,7 +239,7 @@
                     <div class="col-4" style="text-align: right; padding: 0px;">
                         <label>Payment Responsible :  </label>
                     </div>
-                    <div class="col">
+                    <div class="col" style="margin-bottom: -8px;">
                         <input type="checkbox" [(ngModel)]="contactInformation.paymentResponsible" name="paymentResponsible" #paymentResponsible="ngModel" style="width: 18px;">
                     </div>
                 </div>
@@ -608,10 +615,10 @@
         <div class="col">
             <div class="form-group">
                 <div class="row form-group">
-                    <div class="col-4" style="text-align: right; padding: 0px; padding-top: 10px;">
+                    <div class="col-4" style="text-align: right; padding: 0px;">
                         <label>Deposit Recipt Date:  </label>
                     </div>
-                    <div class="col">
+                    <div class="col" style="margin-top: -8px; margin-bottom: -8px;">
                          <input matInput [matDatepicker] = "picker2" placeholder = "Choose a date"
                          [(ngModel)]="contactInformation.depositReceiptDate" name="depositReceiptDate">
                         <mat-datepicker-toggle matSuffix [for] = "picker2"></mat-datepicker-toggle>

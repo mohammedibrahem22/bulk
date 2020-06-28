@@ -18,6 +18,8 @@ export class ActivationActivitiesComponent implements OnInit {
   next: boolean = false;
   isUpload: boolean = false;
 
+  isFirstFormSubmitted: boolean = false;
+
   constructor(private contactInfoFB: FormBuilder,
              private router: Router,
 
@@ -31,11 +33,19 @@ export class ActivationActivitiesComponent implements OnInit {
     // this.contactInformation = new ContactInformation();
     this.createForm();
     console.log("this.contactInformation", this.contactInformation);
-    console.log("form", this.contactInfoForm);
+    // console.log("form", this.contactInfoForm);
     
   }
 
-  saveEntity(){
+  submitFirstForm(f1){
+    // this.isFirstFormSubmitted = true;
+    // console.log("form :", f1);
+    // if(f1.valid){
+    //   console.log("bbbbbbbbbbbbbbbb");
+    //   // this.router.navigateByUrl("/bass/activation-activities/corporate-structure-information");
+    // }
+    
+    
     this.router.navigateByUrl("/bass/activation-activities/corporate-structure-information");
     // this.router.navigate(['/bass/activation-activities/corporate-structure-information']);
     localStorage.setItem('testObject', JSON.stringify(this.contactInformation));

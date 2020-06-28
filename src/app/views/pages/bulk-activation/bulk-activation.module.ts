@@ -10,6 +10,7 @@ import { CorporateStructureComponent } from './corporate-structure/corporate-str
 import {DialogModule} from 'primeng/dialog';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import { BatchJobInformationComponent } from './batch-job-information/batch-job-information.component';
+import {TooltipModule} from 'primeng/tooltip';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { BatchJobInformationComponent } from './batch-job-information/batch-job-
     MatDatepickerModule,
     FileUploadModule,
     DialogModule,
-    InputTextareaModule
+    InputTextareaModule,
+    TooltipModule
   ]
 })
 export class BulkActivationModule { }

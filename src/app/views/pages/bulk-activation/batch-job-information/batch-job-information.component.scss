@@ -11,15 +11,21 @@
     color: white;
   }
 
+  .form-group {
+    margin: 1px;
+    // margin-top: -1px;
+  }
+  
   .btn {
     font-size: 80%;
-    border: 2px solid rgb(145, 141, 141);
+    border: 1px solid rgb(145, 141, 141);
     letter-spacing: .1rem;
     font-weight: bold;
     transition: all 0.2s;
     width: 100px;
     height: 30px;
-    background-color:rgb(230, 223, 223);
+    background-color:rgb(152, 184, 40);
+    color: white;
     // position: fixed;
     padding: 0;
   }
