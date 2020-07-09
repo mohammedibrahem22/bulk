@@ -33,7 +33,7 @@ const routes: Routes = [
 				pathMatch: 'full'
 			},
 			{
-				path: '',
+				path: 'login',
 				component: LoginComponent,
 				data: {returnUrl: window.location.pathname}
 			},

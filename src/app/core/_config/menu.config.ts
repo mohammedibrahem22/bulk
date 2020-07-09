@@ -16,7 +16,7 @@ export class MenuConfig {
 					submenu: [
 						{
 							title: 'Create Corporate Account',
-							page: '/bass/activation-activities/create-corporate-acceount'
+							page: '/bulk/activation-activities/create-corporate-acceount'
 						},
 						{
 							title: 'Create Fixed Corporate Account',

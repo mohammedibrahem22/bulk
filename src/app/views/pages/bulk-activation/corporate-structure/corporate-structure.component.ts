@@ -37,7 +37,7 @@ export class CorporateStructureComponent implements OnInit {
   }
 
   saveEntity(){
-    this.router.navigateByUrl("/bass/activation-activities/batch-job-information");
+    this.router.navigateByUrl("/bulk/activation-activities/batch-job-information");
     console.log("file :", this.corporateStructureInfo);
     localStorage.setItem('corporateStructureInfo', JSON.stringify(this.corporateStructureInfo));
     

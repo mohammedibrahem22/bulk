@@ -46,7 +46,7 @@ export class ActivationActivitiesComponent implements OnInit {
     // }
     
     
-    this.router.navigateByUrl("/bass/activation-activities/corporate-structure-information");
+    this.router.navigateByUrl("/bulk/activation-activities/corporate-structure-information");
     // this.router.navigate(['/bass/activation-activities/corporate-structure-information']);
     localStorage.setItem('testObject', JSON.stringify(this.contactInformation));
     console.log("contactInformation", this.contactInformation);
